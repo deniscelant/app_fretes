@@ -6,16 +6,26 @@ var con = mysql.createConnection({
   password: "asf2141038)*@$#!"
 });
 
-con.connect(function(err) {
-  if (err) throw err;
-  console.log("Connected!");
-});
 
-con.connect(function(err) {
-  if (err) throw err;
-  console.log("Connected!");
-  con.query(sql, function (err, result) {
-    if (err) throw err;
-    console.log("Result: " + result);
+
+// Connect to the MySQL server
+con.connect((error) => {
+  if (error) {
+    console.error('Error connecting to MySQL:', error);
+    return;
+  }
+
+  console.log('Connected to MySQL server.');
+
+  // Perform database operations...
+
+  // Close the MySQL con
+  con.end((error) => {
+    if (error) {
+      console.error('Error closing MySQL connection:', error);
+      return;
+    }
+
+    console.log('MySQL connection closed.');
   });
 });

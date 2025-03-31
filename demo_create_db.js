@@ -1,16 +1,15 @@
-var mysql = require('mysql');
+var mysql = require("mysql");
 
 var con = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "asf2141038)*@$#!"
+  password: "asf2141038)*@$#!",
 });
 
 con.connect(function(err) {
   if (err) throw err;
-  console.log("Connected!");
-  con.query("CREATE DATABASE mydb", function (err, result) {
+  con.query("SELECT * FROM test", function (err, result, fields) {
     if (err) throw err;
-    console.log("Database created");
+    console.log(result);
   });
 });
