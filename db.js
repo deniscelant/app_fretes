@@ -20,12 +20,14 @@ con.connect((error) => {
   // Perform database operations...
 
   // Close the MySQL con
-  con.end((error) => {
-    if (error) {
-      console.error('Error closing MySQL connection:', error);
-      return;
-    }
+ 
+});
 
-    console.log('MySQL connection closed.');
-  });
+con.end((error) => {
+  if (error) {
+    console.error('Error closing MySQL connection:', error);
+    return;
+  }
+
+  console.log('MySQL connection closed.');
 });
