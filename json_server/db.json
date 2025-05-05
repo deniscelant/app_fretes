@@ -1,0 +1,21 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "tittle": "home"
+    },
+    {
+      "id": "2",
+      "tittle": "location"
+    },
+    {
+      "id": "3",
+      "tittle": "hub"
+    },
+    {
+      "id": "4",
+      "tittle": "account"
+    }
+  ],
+  "users": []
+}
