@@ -2,7 +2,8 @@
   "posts": [
     {
       "id": "1",
-      "tittle": "home"
+      "tittle": "home",
+      "html": "json_server/public/login.html"
     },
     {
       "id": "2",
@@ -17,5 +18,14 @@
       "tittle": "account"
     }
   ],
-  "users": []
+  
+  "users": [
+    {
+      "id": "f183",
+      "nome": "Denis",
+      "telefone": 45999898148,
+      "cep": 858003120
+    }
+    
+  ]
 }
