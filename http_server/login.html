@@ -10,7 +10,7 @@
     <form action="http://localhost:8080/http_server/hub.html" id="loginForm" method="get">
         <input type="text" name="name" id="name"  placeholder="Nome completo" required>
         <input type="tel" name="tel" id="tel"  placeholder="Telefone"  required>
-        <input type="text" name="cep" id="cep"  placeholder="CEP" required>
+        <input type="text" name="cep" id="cep" pattern="\d{8,8}" placeholder="CEP" required>
         <button type="submit" id="subButton">Enviar</button>
     </form>
     <script  type="module" src="/http_server/app.js"></script>
