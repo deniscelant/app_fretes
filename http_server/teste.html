@@ -21,8 +21,15 @@
   </head>
   <body>
     <div class="order">
-      <div id="userData">JSON com dados de usuários</div>
-      <div id="orderElements">JSON com dados da mudança</div>
+      <div id="userData">JSON com dados de usuários
+        <input type="text" id="user_name">
+        <input type="tel" id="tel">
+        <input type="text" id="cep">
+      </div>
+      <div id="orderElements">JSON com dados da mudança
+        <h4>Insira os móveis ou objetos que serão enviados</h4>
+        <input type="text" placeholder="EX: Guarda-roupa">
+      </div>
       <form action="">
         <fieldset>
           <legend>Insira as informações abaixo:</legend>
@@ -36,7 +43,13 @@
         </fieldset>
       </form>
 
+    </div
+
+    <div id="dashboard">
+      <div id="doneOrders">Entregas concluídas</div>
+      <div id="onGoingOrders">Entregas em andamento</div>
+      <div id="cancelledOrders">Entregas canceladas</div>
     </div>
-    <script src="get_address.js"></script>
+    <script src="order.js" type="module"></script>
   </body>
 </html>

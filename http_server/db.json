@@ -1,7 +1,38 @@
 {
-    "users": {
+  "users": {
+    "id": "dc123",
+    "nome": "Denis Celant Ferreira",
+    "tel": 45999898148,
+    "cep": 85812003
+  },
+  "orders": {
+    "order_01": {
+      "id": "dc123",
+      "userData": {
         "nome": "Denis Celant Ferreira",
         "tel": 45999898148,
         "cep": 85812003
+      },
+      "orderElements": {
+        "armario": 1,
+        "sofa": 2,
+        "geladeira": 1,
+        "fogao": 1
+      },
+      "startRoute": {
+        "road": "Av. Brasil",
+        "number": 5431,
+        "city": "Cascavel",
+        "uf": "Paraná",
+        "cep": "85812003"
+      },
+      "finalRoute": {
+        "road": "Rua Iraci Vigano",
+        "number": 70,
+        "city": "Cascavel",
+        "uf": "Paraná",
+        "cep": "85812003"
+      }
     }
+  }
 }

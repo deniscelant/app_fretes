@@ -1,9 +1,7 @@
-const urlLogin = "http://localhost:8080/http_server/login.html";
-const urlDB = "http://localhost:8080/http_server/db.json";
-const urlHub = "http://localhost:8080/http_server/hub.html";
+import * as db from "./http_server/url.js"
 
 if (document.title === "Hub") {
-  fetch(urlDB)
+  fetch(db.urlDB)
     .then((response) => response.json()) // ou .json() se for JSON
     .then((text) => {
       const welcome = document.getElementById("welcome");
@@ -15,7 +13,7 @@ if (document.title === "Hub") {
 }
 
 if (document.title === "Login") {
-  fetch(urlDB)
+  fetch(db.urlDB)
     .then((req) => req.json())
     .then((res) => {
       console.log(res.users);
