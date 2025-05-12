@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Cal Sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        letter-spacing: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="order">
+      <div id="userData">JSON com dados de usuários</div>
+      <div id="orderElements">JSON com dados da mudança</div>
+      <form action="">
+        <fieldset>
+          <legend>Insira as informações abaixo:</legend>
+          <input
+            type="text"
+            id="startRoute"
+            placeholder="Embarque da mudança"
+          />
+          <input type="text" id="finalRoute" placeholder="Destino final" />
+          <button type="submit">Finalizar pedido</button>
+        </fieldset>
+      </form>
+
+    </div>
     <script src="get_address.js"></script>
-</body>
+  </body>
 </html>
