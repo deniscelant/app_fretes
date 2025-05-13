@@ -1,4 +1,4 @@
-import * as db from "./http_server/url.js"
+import * as db from "/http_server/url.js"
 
 if (document.title === "Hub") {
   fetch(db.urlDB)
