@@ -1,5 +1,5 @@
 import * as db from "/http_server/url.js";
-import bootstrap from '/bootstrap'
+// import bootstrap from '/bootstrap'
 
 const cep = "85812003";
 const region = cep[0];
@@ -19,7 +19,6 @@ class Order {
         <div id="orderElementsDiv_01">
           <input type="text" placeholder="Armário"/>
           <input type="number" placeholder="2"/>
-            
         </div>
         <button id="addOrderElements">Adicionar mais</button>
       </div>
@@ -86,3 +85,31 @@ button.onclick = () => {
   const order = new Order();
   order.inputOrder();
 };
+
+
+function createOrderElement() {
+  const newDiv = document.createElement("div");
+  const orderName = document.createElement("input");
+  const orderNumber = document.createElement("input");
+
+  const orderElements = document.getElementById("orderElements");
+
+  orderElements.appendChild(newDiv);
+  newDiv.appendChild(orderName);
+  newDiv.appendChild(orderNumber);
+  orderName.type = "text";
+  orderNumber.type = "number";
+}
+
+const buttons = document.querySelectorAll("button");
+buttons.forEach(b => {
+  b.onclick =(e) => {
+    const buttonTarget = e.target.id
+
+    if(buttonTarget === "addOrderElements"){
+      
+      createOrderElement()
+    } else{
+    }
+  }
+})
