@@ -18,8 +18,9 @@ class Order {
       <div id="orderElements">
         <div id="orderElementsDiv_01">
           <input type="text" placeholder="Armário"/>
-          <input type="number" placeholder="2"/>
+          <input type="number" placeholder="0"/>
         </div>
+        <div id="newOrderElementsDiv"></div>
         <button id="addOrderElements">Adicionar mais</button>
       </div>
     </fieldset>
@@ -32,11 +33,13 @@ class Order {
             placeholder="Embarque da mudança"
           />
           <input type="text" id="finalRoute" placeholder="Destino final" />
-          <button type="submit">Finalizar pedido</button>
+          <button type="submit" id="printOrder">Finalizar pedido</button>
         </fieldset>
       </form>
 
     `;
+    createOrderElement()
+    printOrderDoc()
   }
 
   orderDoc() {
@@ -86,30 +89,28 @@ button.onclick = () => {
   order.inputOrder();
 };
 
-
 function createOrderElement() {
-  const newDiv = document.createElement("div");
-  const orderName = document.createElement("input");
-  const orderNumber = document.createElement("input");
+  const addOrderElements = document.getElementById("addOrderElements");
+  addOrderElements.onclick = () => {
+    const newDiv = document.createElement("div");
+    const orderName = document.createElement("input");
+    const orderNumber = document.createElement("input");
 
-  const orderElements = document.getElementById("orderElements");
+    const newOrderElementsDiv = document.getElementById("newOrderElementsDiv");
 
-  orderElements.appendChild(newDiv);
-  newDiv.appendChild(orderName);
-  newDiv.appendChild(orderNumber);
-  orderName.type = "text";
-  orderNumber.type = "number";
+    newOrderElementsDiv.appendChild(newDiv);
+    newDiv.appendChild(orderName);
+    newDiv.appendChild(orderNumber);
+    orderName.type = "text";
+    orderNumber.type = "number";
+  };
 }
 
-const buttons = document.querySelectorAll("button");
-buttons.forEach(b => {
-  b.onclick =(e) => {
-    const buttonTarget = e.target.id
-
-    if(buttonTarget === "addOrderElements"){
-      
-      createOrderElement()
-    } else{
-    }
+function printOrderDoc(){
+  const printOrder = document.getElementById("printOrder")
+  printOrder.onclick = (e) => {
+    e.preventDefault()
+    const order = new Order()
+    order.orderDoc()
   }
-})
+}
